@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.css' %}">
+    <link rel="icon" href="{% static 'img/final.png' %}" type="image/gif">
+    <title>Fun Web</title>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light font">
+    <div class="container">
+        <a class="navbar-brand" href="#">Fun Web</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Bosh sahifa</a>
+            </div>
+            <li class="nav-item dropdown navbar-nav">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                   data-bs-toggle="dropdown" aria-expanded="false">
+                    Mini Games
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="{% url 'math' %}">Matematika</a></li>
+                    <li><a class="dropdown-item" href="{% url 'catch' %}">Meni tut!</a></li>
+                    <li><a class="dropdown-item" href="{% url 'paper' %}">Tosh, Qaychi, Qog'oz</a></li>
+                </ul>
+            </li>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="#">Biz haqimizda</a>
+                <a class="nav-link" href="#">Aloqa</a>
+            </div>
+        </div>
+    </div>
+</nav>
+    {% block content %}{% endblock %}
+</body>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/game.js' %}"></script>
+</html>

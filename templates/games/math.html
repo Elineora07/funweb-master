@@ -1,0 +1,26 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+    <section>
+        <h1>Qiziqarli matematika</h1>
+        <div class="centerdiv">
+            <div class="insertbox">
+                <div class="box1">
+                    <input type="text" id="v1">
+                </div>
+                <div class="box1">
+                    <p>+</p>
+                </div>
+                <div class="box1">
+                    <input type="text" id="v2">
+                </div>
+            </div>
+            <div class="middlebox">
+                <input type="text" id="answer">
+            </div>
+            <div class="sentbox">
+                <button onclick="JsGame()">Javob berish</button>
+            </div>
+        </div>
+    </section>
+{% endblock %}

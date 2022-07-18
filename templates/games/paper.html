@@ -1,0 +1,30 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+    <header>
+        <h1>Tosh, Qaychi, Qog'oz</h1>
+    </header>
+    <div class="bord_game">
+        <div class="score_board">
+            <div id="user-label" class="badg">user</div>
+            <div id="comp-label" class="badg">comp</div>
+            <span id="user-score">0</span>:<span id="comp-score">0</span>
+        </div>
+        <div class="result">
+            <p>Siz yutdingiz</p>
+        </div>
+        <div class="choices">
+            <div class="choice" id="p">
+                <img src="{% static 'img/paper.svg' %}" alt="">
+            </div>
+            <div class="choice" id="r">
+                <img src="{% static 'img/rock.svg' %}" alt="">
+            </div>
+            <div class="choice" id="s">
+                <img src="{% static 'img/scissors.svg' %}" alt="">
+            </div>
+        </div>
+        <p id="action_message">Tanglang</p>
+    </div>
+{% endblock %}
+
